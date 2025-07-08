@@ -8,37 +8,37 @@ export interface ImageMapping {
 // Image mappings for different product categories
 const imageDatabase: ImageMapping = {
   // Soft Drinks
-  'pepsi': 'Menu/assets/images/pepsi-can.jpg',
-  'pepsi-diet': 'Menu/assets/images/pepsi-diet-can.jpg',
-  'miranda': 'Menu/assets/images/miranda-orange.jpg',
-  '7up': 'Menu/assets/images/7up-can.jpg',
-  '7up-diet': 'Menu/assets/images/7up-diet-can.jpg',
-  'water': 'Menu/assets/images/water-bottle.jpg',
+  'pepsi': '/Menu/assets/images/pepsi-can.jpg',
+  'pepsi-diet': '/Menu/assets/images/pepsi-diet-can.jpg',
+  'miranda': '/Menu/assets/images/miranda-orange.jpg',
+  '7up': '/Menu/assets/images/7up-can.jpg',
+  '7up-diet': '/Menu/assets/images/7up-diet-can.jpg',
+  'water': '/Menu/assets/images/water-bottle.jpg',
   
   // Hot Beverages
-  'coffee': '/assets/images/hot-coffee-cup.jpg',
-  'nescafe': '/assets/images/nescafe-instant.jpg',
-  'tea': '/assets/images/black-tea-cup.jpg',
+  'coffee': '/Menu/assets/images/hot-coffee-cup.jpg',
+  'nescafe': '/Menu/assets/images/nescafe-instant.jpg',
+  'tea': '/Menu-- Fix images/assets/images/black-tea-cup.jpg',
   
   // Cold Beverages
-  'ice-tea': 'Menu/assets/images/iced-tea-glass.jpg',
-  'ice-coffee': 'Menu/assets/images/iced-coffee-glass.jpg',
+  'ice-tea': '/Menu/assets/images/iced-tea-glass.jpg',
+  'ice-coffee': '/Menu/assets/images/iced-coffee-glass.jpg',
   
   // Premium Drinks
-  'xxl': 'Menu/assets/images/xxl-energy-drink.jpg',
-  'almaza': 'Menu/assets/images/almaza-beer-bottle.jpg',
-  'almaza-light': 'Menu/assets/images/almaza-light-beer.jpg',
-  'maccaw': 'Menu/assets/images/maccaw-tropical-drink.jpg',
-  'extra-ras': 'Menu/assets/images/extra-ras-beverage.jpg',
-  'rakwe-ahwe': 'Menu/assets/images/arabic-coffee-set.jpg',
-  'termos': 'Menu/assets/images/thermos-hot-drink.jpg',
-  'jazar': 'Menu/assets/images/carrot-juice-glass.jpg',
+  'xxl': '/Menu/assets/images/xxl-energy-drink.jpg',
+  'almaza': '/Menu/assets/images/almaza-beer-bottle.jpg',
+  'almaza-light': '/Menu/assets/images/almaza-light-beer.jpg',
+  'maccaw': '/Menu/assets/images/maccaw-tropical-drink.jpg',
+  'extra-ras': '/Menu/assets/images/extra-ras-beverage.jpg',
+  'rakwe-ahwe': '/Menu/assets/images/arabic-coffee-set.jpg',
+  'termos': '/Menu/assets/images/thermos-hot-drink.jpg',
+  'jazar': '/Menu/assets/images/carrot-juice-glass.jpg',
   
   // Shisha
-  'shisha': 'Menu/assets/images/premium-shisha-setup.jpg',
+  'shisha': '/Menu/assets/images/premium-shisha-setup.jpg',
   
   // Snacks
-  'nuts': 'Menu/assets/images/mixed-nuts-bowl.jpg'
+  'nuts': '/Menu/assets/images/mixed-nuts-bowl.jpg'
 };
 
 // Fallback images for categories when specific item not found
