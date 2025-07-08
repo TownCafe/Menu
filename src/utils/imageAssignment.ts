@@ -18,7 +18,7 @@ const imageDatabase: ImageMapping = {
   // Hot Beverages
   'coffee': '/Menu/assets/images/hot-coffee-cup.jpg',
   'nescafe': '/Menu/assets/images/nescafe-instant.jpg',
-  'tea': '/Menu-- Fix images/assets/images/black-tea-cup.jpg',
+  'tea': '/Menu/assets/images/black-tea-cup.jpg',
   
   // Cold Beverages
   'ice-tea': '/Menu/assets/images/iced-tea-glass.jpg',

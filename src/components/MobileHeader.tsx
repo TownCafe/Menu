@@ -24,7 +24,21 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
     <header className="fixed top-0 left-0 right-0 z-50 glass dark:glass-dark border-b border-amber-200 dark:border-amber-500/30">
       <div className="flex items-center justify-between px-4 h-16">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
+          {/* Town Café Logo */}
+          <div className="w-8 h-8 flex-shrink-0">
+            <img 
+              src="/Menu/town-cafe-logo.svg" 
+              alt="Town Café Logo" 
+              className="w-full h-full object-contain"
+              onError={(e) => {
+                // Fallback to JPG if SVG fails
+                (e.target as HTMLImageElement).src = "/Menu/town-cafe-logo.jpg";
+              }}
+            />
+          </div>
+          
+          {/* Brand Text */}
           <div className="text-xl font-bold">
             <span className="gradient-text">
               {language === 'ar' ? 'تاون كافيه' : 'Town Café'}
