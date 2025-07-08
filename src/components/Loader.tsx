@@ -10,10 +10,10 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete, theme }) => {
   const [currentMessage, setCurrentMessage] = useState(0);
 
   const loadingMessages = [
-    { ar: 'تحضير الأجواء...', en: 'Setting the mood...' },
-    { ar: 'إعداد القائمة...', en: 'Preparing the menu...' },
-    { ar: 'تجهيز الطاولات...', en: 'Setting up tables...' },
-    { ar: 'مرحباً بك...', en: 'Welcome to Town Café...' }
+    {  en: 'Setting the mood...' , ar: 'تحضير الأجواء...' },
+    {  en: 'Preparing the menu...' , ar: 'إعداد القائمة...'},
+    {  en: 'Setting up tables...' , ar: 'تجهيز الطاولات...' },
+    {  en: 'Welcome to Town Café...' , ar: 'مرحبًا بكم في تاون كافيه...' }
   ];
 
   useEffect(() => {
@@ -39,11 +39,7 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete, theme }) => {
   }, [onLoadComplete]);
 
   return (
-    <div className={`fixed inset-0 flex items-center justify-center z-50 transition-all duration-1000 ${
-      theme === 'light' 
-        ? 'bg-gradient-to-br from-amber-50 via-orange-50 to-red-50' 
-        : 'bg-gradient-to-br from-slate-900 via-amber-900/20 to-slate-800'
-    }`}>
+    <div className="fixed inset-0 flex items-center justify-center z-50 transition-all duration-1000 min-h-screen" style={{ background: 'rgba(255, 255, 255, 0.95)' }}>
       
       {/* Ambient Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -75,7 +71,7 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete, theme }) => {
                   theme === 'light' ? 'bg-white' : 'bg-slate-800'
                 }`}>
                   <img 
-                    src="/town-cafe-logo.jpg"
+                    src="/Menu/town-cafe-logo.jpg"
                     alt="Town Café Ambiance"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -85,7 +81,7 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete, theme }) => {
               </div>
               
               {/* Pulsing glow effect */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 opacity-30 animate-pulse scale-110 blur-xl"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400 to-orange-100 opacity-10 animate-pulse scale-110 blur-xl"></div>
             </div>
             
             {/* Logo overlay - small Town Café logo */}
@@ -97,15 +93,15 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete, theme }) => {
 
         {/* Enhanced Typography with Clear Hierarchy */}
         <div className="mb-8 space-y-2">
-          {/* Primary Brand Name - Arabic leads */}
-          <h1 className="text-4xl md:text-5xl font-bold arabic-text leading-tight">
-            <span className="gradient-text">تاون كافيه</span>
-          </h1>
-          
+        
           {/* Secondary Brand Name - English */}
           <h2 className="text-2xl md:text-3xl font-semibold tracking-wide">
             <span className="gradient-text">TOWN CAFÉ</span>
           </h2>
+            {/* Primary Brand Name - Arabic leads */}
+          <h1 className="text-4xl md:text-5xl font-bold arabic-text leading-tight">
+            <span className="gradient-text">تاون كافيه</span>
+          </h1>
           
           {/* Tagline with cultural elements */}
           <div className="flex items-center justify-center space-x-2 mt-4">
@@ -117,15 +113,15 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete, theme }) => {
 
         {/* Refined Descriptions */}
         <div className="mb-8 space-y-3">
-          <p className={`text-base font-medium arabic-text ${
+          <p className={`text-base font-medium  ${
             theme === 'light' ? 'text-slate-700' : 'text-slate-200'
           }`}>
-            كافيه عصري لعشاق الشيشة والمشروبات الفاخرة
+            Modern café for shisha and premium drinks lovers
           </p>
-          <p className={`text-sm ${
+          <p className={`text-sm arabic-text${
             theme === 'light' ? 'text-slate-600' : 'text-slate-300'
           }`}>
-            Modern café for shisha and premium drinks lovers
+            كافيه عصري لعشاق الشيشة والمشروبات الفاخرة
           </p>
         </div>
 
@@ -148,12 +144,12 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete, theme }) => {
             <p className={`text-sm font-medium transition-all duration-500 ${
               theme === 'light' ? 'text-slate-700' : 'text-slate-200'
             }`}>
-              <span className="arabic-text">{loadingMessages[currentMessage].ar}</span>
+              {loadingMessages[currentMessage].en}
             </p>
             <p className={`text-xs transition-all duration-500 ${
               theme === 'light' ? 'text-slate-500' : 'text-slate-400'
             }`}>
-              {loadingMessages[currentMessage].en}
+              <span className="arabic-text">{loadingMessages[currentMessage].ar}</span>
             </p>
             <p className="text-xs text-amber-600 font-semibold mt-2">
               {Math.round(progress)}%

@@ -257,7 +257,7 @@ function App() {
             <div className="mb-8">
               <div className="w-24 h-24 mx-auto mb-4">
                 <img 
-                  src="/town-cafe-logo.svg" 
+                  src="/Menu/town-cafe-logo.svg" 
                   alt="Town Café Logo" 
                   className="w-full h-full object-contain"
                 />
@@ -265,40 +265,40 @@ function App() {
             </div>
           )}
           
-          {/* <h1 className={`${isMobile ? 'text-4xl' : 'text-5xl md:text-7xl'} font-bold mb-6 arabic-text`}>
+          <h1 className={`${isMobile ? 'text-4xl' : 'text-5xl md:text-7xl'} font-bold mb-6 arabic-text`}>
             <span className="gradient-text">
-              {language === 'ar' ? 'تاون كافيه' : 'Town Café'}
+              {language === 'ar' ? 'تاون كافيه' : 'Welcome to Town Café'}
             </span>
-          </h1> */}
+          </h1> 
           
-          {!isMobile && (
+           {/* {!isMobile && (
             <p className="text-xl md:text-2xl mb-6 text-amber-700 dark:text-amber-300 font-medium">
               {language === 'ar' 
                 ? 'كافيه عصري لعشاق الشيشة والمشروبات الفاخرة' 
                 : 'Modern café for shisha and premium drinks lovers'
               }
             </p>
-          )}
+          )}  */}
           
-          <p className={`${isMobile ? 'text-lg mb-4' : 'text-lg mb-8'} text-amber-600 dark:text-amber-400`}>
+          {/* <p className={`${isMobile ? 'text-lg mb-4' : 'text-lg mb-8'} text-amber-600 dark:text-amber-400`}>
             {language === 'ar' 
               ? isMobile ? 'كافيه عصري لعشاق الشيشة' : 'تجربة فريدة مع أفضل أنواع الشيشة والمشروبات في أجواء عصرية ومريحة'
               : isMobile ? 'Modern café for shisha lovers' : 'Where tradition meets modern comfort in the heart of Riyadh'
             }
-          </p>
+          </p> */}
           
           {/* Decorative divider */}
-          <div className="flex items-center justify-center space-x-3 mb-4">
+           <div className="flex items-center justify-center space-x-3 mb-4">
             <div className={`${isMobile ? 'w-12' : 'w-16'} h-0.5 bg-gradient-to-r from-transparent to-amber-600`}></div>
             <span className="text-amber-700 text-lg">☕</span>
-            <span className="text-orange-600 text-sm">♨</span>
+            <span className="text-orange-600 text-sm">Daily: 6 PM - 2 AM</span>
             <span className="text-amber-700 text-lg">☕</span>
             <div className={`${isMobile ? 'w-12' : 'w-16'} h-0.5 bg-gradient-to-r from-amber-600 to-transparent`}></div>
-          </div>
+          </div> 
           
-          <p className="text-sm text-orange-600 dark:text-orange-400 italic mb-6">
+          {/* <p className="text-sm text-orange-600 dark:text-orange-400 italic mb-6">
             {language === 'ar' ? 'حيث يلتقي التراث بالراحة العصرية' : 'Authentic flavors, modern atmosphere'}
-          </p>
+          </p> */}
         </div>
       </section>
 
