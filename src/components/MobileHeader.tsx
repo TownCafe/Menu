@@ -52,8 +52,10 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
             </button>
           </div>
 
-          {/* Theme Toggle */}
-          <ThemeToggle theme={theme} language={language} onToggle={onToggleTheme} />
+          {/* Theme Toggle - Hidden */}
+          <div className="hidden">
+            <ThemeToggle theme={theme} language={language} onToggle={onToggleTheme} />
+          </div>
 
           {/* Language Toggle */}
           <LanguageToggle language={language} onToggle={onToggleLanguage} />

@@ -1,5 +1,6 @@
 import { Cigarette, Coffee, Droplet, Wine } from 'lucide-react';
 import { MenuCategory } from '../types';
+import { getImageForItem } from '../utils/imageAssignment';
 
 export const menuData: MenuCategory[] = [
   {
@@ -17,7 +18,7 @@ export const menuData: MenuCategory[] = [
         price: 500000,
         description: 'Premium shisha with your choice of flavor',
         descriptionAr: 'شيشة ممتازة مع النكهة التي تختارها',
-        image: 'https://images.pexels.com/photos/6249509/pexels-photo-6249509.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('shisha', 'Shisha', 'shisha'),
         category: 'shisha',
         preparationTime: 15,
         isPopular: true,
@@ -40,7 +41,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Classic cola drink',
         descriptionAr: 'مشروب كولا كلاسيكي',
-        image: 'https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('pepsi', 'Pepsi', 'soft-drinks'),
         category: 'soft-drinks',
         preparationTime: 2,
         tags: ['refreshing']
@@ -52,7 +53,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Sugar-free cola drink',
         descriptionAr: 'مشروب كولا خالي من السكر',
-        image: 'https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('pepsi-diet', 'Pepsi Diet', 'soft-drinks'),
         category: 'soft-drinks',
         preparationTime: 2,
         tags: ['diet', 'sugar-free']
@@ -64,7 +65,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Orange flavored soft drink',
         descriptionAr: 'مشروب غازي بطعم البرتقال',
-        image: 'https://images.pexels.com/photos/1346155/pexels-photo-1346155.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('miranda', 'Miranda', 'soft-drinks'),
         category: 'soft-drinks',
         preparationTime: 2,
         tags: ['orange', 'citrus']
@@ -76,7 +77,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Lemon-lime flavored soda',
         descriptionAr: 'مشروب غازي بطعم الليمون',
-        image: 'https://images.pexels.com/photos/1292294/pexels-photo-1292294.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('7up', '7UP', 'soft-drinks'),
         category: 'soft-drinks',
         preparationTime: 2,
         tags: ['lemon', 'lime']
@@ -88,7 +89,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Sugar-free lemon-lime soda',
         descriptionAr: 'مشروب غازي خالي من السكر بطعم الليمون',
-        image: 'https://images.pexels.com/photos/1292294/pexels-photo-1292294.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('7up-diet', '7UP Diet', 'soft-drinks'),
         category: 'soft-drinks',
         preparationTime: 2,
         tags: ['diet', 'sugar-free', 'lemon']
@@ -100,7 +101,7 @@ export const menuData: MenuCategory[] = [
         price: 50000,
         description: 'Pure drinking water',
         descriptionAr: 'مياه شرب نقية',
-        image: 'https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('water', 'Water', 'soft-drinks'),
         category: 'soft-drinks',
         preparationTime: 1,
         tags: ['healthy', 'pure']
@@ -122,7 +123,7 @@ export const menuData: MenuCategory[] = [
         price: 100000,
         description: 'Fresh brewed coffee',
         descriptionAr: 'قهوة طازجة محضرة',
-        image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('coffee', 'Coffee', 'hot-beverages'),
         category: 'hot-beverages',
         preparationTime: 5,
         isPopular: true,
@@ -135,7 +136,7 @@ export const menuData: MenuCategory[] = [
         price: 100000,
         description: 'Instant coffee',
         descriptionAr: 'قهوة سريعة التحضير',
-        image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('nescafe', 'Nescafe', 'hot-beverages'),
         category: 'hot-beverages',
         preparationTime: 3,
         tags: ['instant', 'quick']
@@ -147,7 +148,7 @@ export const menuData: MenuCategory[] = [
         price: 100000,
         description: 'Traditional black tea',
         descriptionAr: 'شاي أسود تقليدي',
-        image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('tea', 'Tea', 'hot-beverages'),
         category: 'hot-beverages',
         preparationTime: 5,
         tags: ['traditional', 'hot']
@@ -169,7 +170,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Refreshing iced tea',
         descriptionAr: 'شاي مثلج منعش',
-        image: 'https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('ice-tea', 'Ice Tea', 'cold-beverages'),
         category: 'cold-beverages',
         preparationTime: 5,
         tags: ['iced', 'refreshing']
@@ -181,7 +182,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Cold brewed iced coffee',
         descriptionAr: 'قهوة مثلجة باردة',
-        image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('ice-coffee', 'Ice Coffee', 'cold-beverages'),
         category: 'cold-beverages',
         preparationTime: 5,
         tags: ['iced', 'coffee']
@@ -203,7 +204,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Premium energy drink',
         descriptionAr: 'مشروب طاقة مميز',
-        image: 'https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('xxl', 'XXL', 'premium-drinks'),
         category: 'premium-drinks',
         preparationTime: 2,
         tags: ['energy', 'premium']
@@ -215,7 +216,7 @@ export const menuData: MenuCategory[] = [
         price: 200000,
         description: 'Premium Lebanese beer',
         descriptionAr: 'بيرة لبنانية مميزة',
-        image: 'https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('almaza', 'Almaza', 'premium-drinks'),
         category: 'premium-drinks',
         preparationTime: 2,
         tags: ['beer', 'lebanese', 'premium']
@@ -227,7 +228,7 @@ export const menuData: MenuCategory[] = [
         price: 200000,
         description: 'Light Lebanese beer',
         descriptionAr: 'بيرة لبنانية خفيفة',
-        image: 'https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('almaza-light', 'Almaza Light', 'premium-drinks'),
         category: 'premium-drinks',
         preparationTime: 2,
         tags: ['beer', 'light', 'lebanese']
@@ -239,7 +240,7 @@ export const menuData: MenuCategory[] = [
         price: 100000,
         description: 'Tropical fruit drink',
         descriptionAr: 'مشروب فواكه استوائية',
-        image: 'https://images.pexels.com/photos/1346155/pexels-photo-1346155.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('maccaw', 'Maccaw', 'premium-drinks'),
         category: 'premium-drinks',
         preparationTime: 3,
         tags: ['tropical', 'fruit']
@@ -251,7 +252,7 @@ export const menuData: MenuCategory[] = [
         price: 150000,
         description: 'Special local beverage',
         descriptionAr: 'مشروب محلي خاص',
-        image: 'https://images.pexels.com/photos/2983100/pexels-photo-2983100.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('extra-ras', 'Extra Ras', 'premium-drinks'),
         category: 'premium-drinks',
         preparationTime: 3,
         tags: ['local', 'special']
@@ -263,7 +264,7 @@ export const menuData: MenuCategory[] = [
         price: 300000,
         description: 'Traditional Arabic coffee service',
         descriptionAr: 'خدمة قهوة عربية تقليدية',
-        image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('rakwe-ahwe', 'Rakwe Ahwe', 'premium-drinks'),
         category: 'premium-drinks',
         preparationTime: 10,
         isChefRecommended: true,
@@ -276,7 +277,7 @@ export const menuData: MenuCategory[] = [
         price: 100000,
         description: 'Thermos hot beverage',
         descriptionAr: 'مشروب ساخن في ترموس',
-        image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('termos', 'Termos', 'premium-drinks'),
         category: 'premium-drinks',
         preparationTime: 5,
         tags: ['hot', 'thermos']
@@ -288,7 +289,7 @@ export const menuData: MenuCategory[] = [
         price: 100000,
         description: 'Fresh carrot juice',
         descriptionAr: 'عصير جزر طازج',
-        image: 'https://images.pexels.com/photos/1346155/pexels-photo-1346155.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('jazar', 'Jazar', 'premium-drinks'),
         category: 'premium-drinks',
         preparationTime: 5,
         tags: ['fresh', 'healthy', 'juice']
@@ -310,7 +311,7 @@ export const menuData: MenuCategory[] = [
         price: 100000,
         description: 'Mixed nuts assortment',
         descriptionAr: 'تشكيلة مكسرات مختلطة',
-        image: 'https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: getImageForItem('nuts', 'Nuts', 'snacks'),
         category: 'snacks',
         preparationTime: 1,
         tags: ['healthy', 'crunchy']
