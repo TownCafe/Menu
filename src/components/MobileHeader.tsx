@@ -22,11 +22,11 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
 }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass dark:glass-dark border-b border-amber-200 dark:border-amber-500/30">
-      <div className="flex items-center justify-between px-4 h-16">
-        {/* Logo */}
-        <div className="flex items-center gap-3">
+      <div className="flex items-center justify-between px-4 h-12">
+        {/* Logo and Brand */}
+        <div className="flex items-center gap-2">
           {/* Town Café Logo */}
-          <div className="w-8 h-8 flex-shrink-0">
+          <div className="w-7 h-7 flex-shrink-0">
             <img 
               src="/Menu/town-cafe-logo.svg" 
               alt="Town Café Logo" 
@@ -39,7 +39,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
           </div>
           
           {/* Brand Text */}
-          <div className="text-xl font-bold">
+          <div className="text-lg font-bold">
             <span className="gradient-text">
               {language === 'ar' ? 'تاون كافيه' : 'Town Café'}
             </span>
