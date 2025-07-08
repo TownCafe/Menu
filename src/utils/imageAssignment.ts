@@ -29,16 +29,16 @@ const imageDatabase: ImageMapping = {
   'almaza': '/Menu/assets/images/almaza-beer-bottle.jpg',
   'almaza-light': '/Menu/assets/images/almaza-light-beer.jpg',
   'maccaw': '/Menu/assets/images/maccaw-tropical-drink.jpg',
-  'extra-ras': '/Menu/assets/images/extra-ras-beverage.jpg',
-  'rakwe-ahwe': '/Menu/assets/images/arabic-coffee-set.jpg',
-  'termos': '/Menu/assets/images/thermos-hot-drink.jpg',
-  'jazar': '/Menu/assets/images/carrot-juice-glass.jpg',
+  'extra-ras': '/Menu/assets/images/ras.jpg',
+  'rakwe-ahwe': '/Menu/assets/images/coffeerakwa.png',
+  'termos': '/Menu/assets/images/termos.png',
+  'jazar': '/Menu/assets/images/carrot.png',
   
   // Shisha
   'shisha': '/Menu/assets/images/premium-shisha-setup.jpg',
   
   // Snacks
-  'nuts': '/Menu/assets/images/mixed-nuts-bowl.jpg'
+  'nuts': '/Menu/assets/images/nuts.jpg'
 };
 
 // Fallback images for categories when specific item not found
