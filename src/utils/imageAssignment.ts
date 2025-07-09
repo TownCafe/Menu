@@ -28,7 +28,7 @@ const imageDatabase: ImageMapping = {
   'xxl': '/Menu/assets/images/xxl-energy-drink.jpg',
   'almaza': '/Menu/assets/images/almaza-beer-bottle.jpg',
   'almaza-light': '/Menu/assets/images/almaza-light-beer.jpg',
-  'maccaw': '/Menu/assets/images/maccaw-tropical-drink.jpg',
+  'maccaw': '/Menu/assets/images/maccaw-juice.png',
   'extra-ras': '/Menu/assets/images/ras.jpg',
   'rakwe-ahwe': '/Menu/assets/images/coffeerakwa.png',
   'termos': '/Menu/assets/images/termos.png',
