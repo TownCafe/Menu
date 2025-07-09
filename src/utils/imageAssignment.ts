@@ -28,7 +28,7 @@ const imageDatabase: ImageMapping = {
   'xxl': '/Menu/assets/images/xxl.png',
   'almaza': '/Menu/assets/images/almaza-regular.png',
   'almaza-light': '/Menu/assets/images/almazalight.png',
- 'maccaw': '/Menu/assets/images/maccaw-juice.png',
+  'maccaw': '/Menu/assets/images/maccaw-sm.png',
   'extra-ras': '/Menu/assets/images/ras.jpg',
   'rakwe-ahwe': '/Menu/assets/images/coffeerakwa.png',
   'termos': '/Menu/assets/images/termos.png',

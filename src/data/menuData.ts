@@ -167,7 +167,7 @@ export const menuData: MenuCategory[] = [
       },
       {
         id: 'rakwe-ahwe',
-        name: 'Rakwe Ahwe',
+        name: 'Rakwet Ahwe',
         nameAr: 'ركوة قهوة',
         price: 300000,
         description: 'Traditional Arabic coffee service',
