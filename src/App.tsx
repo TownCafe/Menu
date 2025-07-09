@@ -343,8 +343,8 @@ function App() {
                   </p>
                   <p className="text-sm text-amber-600 dark:text-amber-400">
                     {language === 'ar' 
-                      ? 'الرياض، حي الملز' 
-                      : 'Riyadh, Al Malaz District'
+                      ? 'مول الدكوانة - مار روكز، لبنان'  
+                      : 'The Mall Dekwaneh-Mar Roukoz, Lebanon'
                     }
                   </p>
                 </div>
@@ -371,8 +371,8 @@ function App() {
                   </h4>
                   <p className="text-amber-600 dark:text-amber-400">
                     {language === 'ar' 
-                      ? 'الرياض، حي الملز، شارع الأمير محمد بن عبدالعزيز' 
-                      : 'Riyadh, Al Malaz District, Prince Mohammed bin Abdulaziz Street'
+                      ? 'مول الدكوانة - مار روكز، لبنان' 
+                      : 'The Mall Dekwaneh-Mar Roukoz, Lebanon'
                     }
                   </p>
                 </div>

@@ -139,7 +139,7 @@ const Header: React.FC<HeaderProps> = ({
               <div className="flex items-center space-x-3 px-4">
                 <MapPin size={16} className="text-amber-600" />
                 <span className={`text-sm ${theme === 'light' ? 'text-slate-600' : 'text-slate-300'}`}>
-                  {language === 'ar' ? 'الرياض، حي الملز' : 'Riyadh, Al Malaz'}
+                  {language === 'ar' ? 'مول الدكوانة - مار روكز، لبنان'  : 'The Mall Dekwaneh-Mar Roukoz, Lebanon'}
                 </span>
               </div>
             </div>

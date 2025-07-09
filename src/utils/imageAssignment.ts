@@ -8,15 +8,15 @@ export interface ImageMapping {
 // Image mappings for different product categories
 const imageDatabase: ImageMapping = {
   // Soft Drinks
-  'pepsi': '/Menu/assets/images/pepsi-can.jpg',
-  'pepsi-diet': '/Menu/assets/images/pepsi-diet-can.jpg',
-  'miranda': '/Menu/assets/images/miranda-orange.jpg',
-  '7up': '/Menu/assets/images/7up-can.jpg',
-  '7up-diet': '/Menu/assets/images/7up-diet-can.jpg',
+  'pepsi': '/Menu/assets/images/pepsi.png',
+  'pepsi-diet': '/Menu/assets/images/diet-pepsi.png',
+  'miranda': '/Menu/assets/images/miranda.png',
+  '7up': '/Menu/assets/images/7up.png',
+  '7up-diet': '/Menu/assets/images/diet-7up.png',
   'water': '/Menu/assets/images/water-bottle.jpg',
   
   // Hot Beverages
-  'coffee': '/Menu/assets/images/hot-coffee-cup.jpg',
+  'coffee': '/Menu/assets/images/coffee-cup.png',
   'nescafe': '/Menu/assets/images/nescafe-instant.jpg',
   'tea': '/Menu/assets/images/black-tea-cup.jpg',
   
@@ -29,16 +29,19 @@ const imageDatabase: ImageMapping = {
   'almaza': '/Menu/assets/images/almaza-regular.png',
   'almaza-light': '/Menu/assets/images/almazalight.png',
   'maccaw': '/Menu/assets/images/maccaw-sm.png',
-  'extra-ras': '/Menu/assets/images/ras.jpg',
+  'extra-ras': '/Menu/assets/images/ras.jpeg',
   'rakwe-ahwe': '/Menu/assets/images/coffeerakwa.png',
   'termos': '/Menu/assets/images/termos.png',
   'jazar': '/Menu/assets/images/carrot.png',
   
   // Shisha
-  'shisha': '/Menu/assets/images/premium-shisha-setup.jpg',
+  'shisha': '/Menu/assets/images/ss.png',
   
   // Snacks
-  'nuts': '/Menu/assets/images/nuts.jpg'
+  'nuts': '/Menu/assets/images/nuts.jpg',
+  
+  // Food (new category for menu links)
+  'food': '/Menu/assets/images/food-generic.jpg'
 };
 
 // Fallback images for categories when specific item not found
@@ -48,7 +51,8 @@ const categoryFallbacks: ImageMapping = {
   'cold-beverages': '/assets/images/cold-beverage-generic.jpg',
   'premium-drinks': '/assets/images/premium-drink-generic.jpg',
   'shisha': '/assets/images/shisha-generic.jpg',
-  'snacks': '/assets/images/snacks-generic.jpg'
+  'snacks': '/assets/images/snacks-generic.jpg',
+  'food': '/assets/images/food-generic.jpg'
 };
 
 /**
@@ -126,6 +130,19 @@ export function getImagesForCategory(category: string): string[] {
              (categoryFallbacks[category] && imageDatabase[key] === categoryFallbacks[category]);
     })
     .map(key => imageDatabase[key]);
+}
+
+/**
+ * Get menu links for the food section
+ * @returns Array of menu link objects
+ */
+export function getFoodMenuLinks(): { name: string; url: string }[] {
+  return [
+    { name: 'Main Food Menu', url: 'https://example.com/food-menu.pdf' },
+    { name: 'Desserts Menu', url: 'https://example.com/desserts-menu.pdf' },
+    { name: 'Specials', url: 'https://example.com/specials-menu.pdf' }
+    // Add more links as needed
+  ];
 }
 
 // Export the mappings for external use if needed
