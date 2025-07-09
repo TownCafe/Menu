@@ -21,13 +21,13 @@ const imageDatabase: ImageMapping = {
   'tea': '/Menu/assets/images/black-tea-cup.jpg',
   
   // Cold Beverages
-  'ice-tea': '/Menu/assets/images/iced-tea-glass.jpg',
-  'ice-coffee': '/Menu/assets/images/iced-coffee-glass.jpg',
+  'ice-tea': '/Menu/assets/images/icedteas.png',
+  'ice-coffee': '/Menu/assets/images/iced-coffee.png',
   
   // Premium Drinks
-  'xxl': '/Menu/assets/images/xxl-energy-drink.jpg',
-  'almaza': '/Menu/assets/images/almaza-beer-bottle.jpg',
-  'almaza-light': '/Menu/assets/images/almaza-light-beer.jpg',
+  'xxl': '/Menu/assets/images/xxl.png',
+  'almaza': '/Menu/assets/images/almaza-regular.png',
+  'almaza-light': '/Menu/assets/images/almazalight.png',
   'maccaw': '/Menu/assets/images/maccaw-tropical-drink.jpg',
   'extra-ras': '/Menu/assets/images/ras.jpg',
   'rakwe-ahwe': '/Menu/assets/images/coffeerakwa.png',
