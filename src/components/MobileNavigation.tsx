@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cigarette, Coffee, Droplet, Wine } from 'lucide-react';
+import { Cigarette, Coffee, CupSoda, Droplet, GlassWater, Popcorn, Snowflake, Wine } from 'lucide-react';
 
 interface MobileNavigationProps {
   activeSection: string;
@@ -16,11 +16,11 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
 }) => {
   const sections = [
     { id: 'shisha', name: 'Shisha', nameAr: 'الشيشة', icon: Cigarette },
-    { id: 'soft-drinks', name: 'Soft Drinks', nameAr: 'الغازية', icon: Droplet },
+    { id: 'soft-drinks', name: 'Soft Drinks', nameAr: 'الغازية', icon: CupSoda },
     { id: 'hot-beverages', name: 'Hot', nameAr: 'الساخنة', icon: Coffee },
-    { id: 'cold-beverages', name: 'Cold', nameAr: 'الباردة', icon: Wine },
-    { id: 'premium-drinks', name: 'Premium', nameAr: 'المميزة', icon: Wine },
-    { id: 'snacks', name: 'Snacks', nameAr: 'المقبلات', icon: Coffee }
+    { id: 'cold-beverages', name: 'Cold', nameAr: 'الباردة', icon: GlassWater },
+    // { id: 'premium-drinks', name: 'Premium', nameAr: 'المميزة', icon: Wine },
+    { id: 'snacks', name: 'Snacks', nameAr: 'المقبلات', icon: Popcorn }
   ];
 
   const scrollToSection = (sectionId: string) => {

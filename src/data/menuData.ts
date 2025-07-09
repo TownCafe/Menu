@@ -23,7 +23,19 @@ export const menuData: MenuCategory[] = [
         preparationTime: 15,
         isPopular: true,
         tags: ['popular', 'premium']
-      }
+      },
+      {
+        id: 'extra-ras',
+        name: 'Extra Ras',
+        nameAr: 'اكسترا راس',
+        price: 150000,
+        description: 'Special local beverage',
+        descriptionAr: 'مشروب محلي خاص',
+        image: getImageForItem('extra-ras', 'Extra Ras', 'shisha'),
+        category: 'shisha',
+        preparationTime: 3,
+        tags: ['local', 'special']
+      },
     ]
   },
   {
@@ -152,6 +164,19 @@ export const menuData: MenuCategory[] = [
         category: 'hot-beverages',
         preparationTime: 5,
         tags: ['traditional', 'hot']
+      },
+      {
+        id: 'rakwe-ahwe',
+        name: 'Rakwe Ahwe',
+        nameAr: 'ركوة قهوة',
+        price: 300000,
+        description: 'Traditional Arabic coffee service',
+        descriptionAr: 'خدمة قهوة عربية تقليدية',
+        image: getImageForItem('rakwe-ahwe', 'Rakwe Ahwe', 'hot-beverages'),
+        category: 'hot-beverages',
+        preparationTime: 10,
+        isChefRecommended: true,
+        tags: ['traditional', 'arabic', 'premium']
       }
     ]
   },
@@ -186,26 +211,15 @@ export const menuData: MenuCategory[] = [
         category: 'cold-beverages',
         preparationTime: 5,
         tags: ['iced', 'coffee']
-      }
-    ]
-  },
-  {
-    id: 'premium-drinks',
-    title: 'Premium Drinks',
-    titleAr: 'المشروبات المميزة',
-    icon: Wine,
-    description: 'Special and premium beverages',
-    descriptionAr: 'مشروبات خاصة ومميزة',
-    items: [
-      {
+      },{
         id: 'xxl',
         name: 'XXL',
         nameAr: 'اكس اكس ال',
         price: 150000,
         description: 'Premium energy drink',
         descriptionAr: 'مشروب طاقة مميز',
-        image: getImageForItem('xxl', 'XXL', 'premium-drinks'),
-        category: 'premium-drinks',
+        image: getImageForItem('xxl', 'XXL', 'cold-beverages'),
+        category: 'cold-beverages',
         preparationTime: 2,
         tags: ['energy', 'premium']
       },
@@ -216,8 +230,8 @@ export const menuData: MenuCategory[] = [
         price: 200000,
         description: 'Premium Lebanese beer',
         descriptionAr: 'بيرة لبنانية مميزة',
-        image: getImageForItem('almaza', 'Almaza', 'premium-drinks'),
-        category: 'premium-drinks',
+        image: getImageForItem('almaza', 'Almaza', 'cold-beverages'),
+        category: 'cold-beverages',
         preparationTime: 2,
         tags: ['beer', 'lebanese', 'premium']
       },
@@ -228,8 +242,8 @@ export const menuData: MenuCategory[] = [
         price: 200000,
         description: 'Light Lebanese beer',
         descriptionAr: 'بيرة لبنانية خفيفة',
-        image: getImageForItem('almaza-light', 'Almaza Light', 'premium-drinks'),
-        category: 'premium-drinks',
+        image: getImageForItem('almaza-light', 'Almaza Light', 'cold-beverages'),
+        category: 'cold-beverages',
         preparationTime: 2,
         tags: ['beer', 'light', 'lebanese']
       },
@@ -240,60 +254,12 @@ export const menuData: MenuCategory[] = [
         price: 100000,
         description: 'Tropical fruit drink',
         descriptionAr: 'مشروب فواكه استوائية',
-        image: getImageForItem('maccaw', 'Maccaw', 'premium-drinks'),
-        category: 'premium-drinks',
+        image: getImageForItem('maccaw', 'Maccaw', 'cold-beverages'),
+        category: 'cold-beverages',
         preparationTime: 3,
         tags: ['tropical', 'fruit']
-      },
-      {
-        id: 'extra-ras',
-        name: 'Extra Ras',
-        nameAr: 'اكسترا راس',
-        price: 150000,
-        description: 'Special local beverage',
-        descriptionAr: 'مشروب محلي خاص',
-        image: getImageForItem('extra-ras', 'Extra Ras', 'premium-drinks'),
-        category: 'premium-drinks',
-        preparationTime: 3,
-        tags: ['local', 'special']
-      },
-      {
-        id: 'rakwe-ahwe',
-        name: 'Rakwe Ahwe',
-        nameAr: 'ركوة قهوة',
-        price: 300000,
-        description: 'Traditional Arabic coffee service',
-        descriptionAr: 'خدمة قهوة عربية تقليدية',
-        image: getImageForItem('rakwe-ahwe', 'Rakwe Ahwe', 'premium-drinks'),
-        category: 'premium-drinks',
-        preparationTime: 10,
-        isChefRecommended: true,
-        tags: ['traditional', 'arabic', 'premium']
-      },
-      {
-        id: 'termos',
-        name: 'Termos',
-        nameAr: 'ترموس',
-        price: 100000,
-        description: 'Thermos hot beverage',
-        descriptionAr: 'مشروب ساخن في ترموس',
-        image: getImageForItem('termos', 'Termos', 'premium-drinks'),
-        category: 'premium-drinks',
-        preparationTime: 5,
-        tags: ['hot', 'thermos']
-      },
-      {
-        id: 'jazar',
-        name: 'Jazar',
-        nameAr: 'جزر',
-        price: 100000,
-        description: 'Fresh carrot juice',
-        descriptionAr: 'عصير جزر طازج',
-        image: getImageForItem('jazar', 'Jazar', 'premium-drinks'),
-        category: 'premium-drinks',
-        preparationTime: 5,
-        tags: ['fresh', 'healthy', 'juice']
       }
+      
     ]
   },
   {
@@ -315,6 +281,30 @@ export const menuData: MenuCategory[] = [
         category: 'snacks',
         preparationTime: 1,
         tags: ['healthy', 'crunchy']
+      },
+      {
+        id: 'termos',
+        name: 'Termos',
+        nameAr: 'ترموس',
+        price: 100000,
+        description: 'Thermos hot beverage',
+        descriptionAr: 'مشروب ساخن في ترموس',
+        image: getImageForItem('termos', 'Termos', 'snacks'),
+        category: 'snacks',
+        preparationTime: 5,
+        tags: ['hot', 'thermos']
+      },
+      {
+        id: 'jazar',
+        name: 'Carrots',
+        nameAr: 'جزر',
+        price: 100000,
+        description: 'Fresh carrot juice',
+        descriptionAr: 'عصير جزر طازج',
+        image: getImageForItem('jazar', 'Jazar', 'snacks'),
+        category: 'snacks',
+        preparationTime: 5,
+        tags: ['fresh', 'healthy', 'juice']
       }
     ]
   }
