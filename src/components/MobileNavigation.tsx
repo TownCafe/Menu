@@ -20,7 +20,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
     { id: 'shisha', name: 'Shisha', nameAr: 'الشيشة', icon: Cigarette },
     { id: 'soft-drinks', name: 'Soft Drinks', nameAr: 'الغازية', icon: CupSoda },
     { id: 'hot-beverages', name: 'Hot', nameAr: 'الساخنة', icon: Coffee },
-    { id: 'cold-beverages', name: 'Cold', nameAr: 'الباردة', icon: GlassWater },
+    { id: 'cold-beverages', name: 'Cold', nameAr: 'الباردة', icon: Wine },
     // { id: 'premium-drinks', name: 'Premium', nameAr: 'المميزة', icon: Wine },
     { id: 'snacks', name: 'Snacks', nameAr: 'المقبلات', icon: Popcorn },
     { id: 'food', name: 'food', nameAr: 'food', icon: Utensils }

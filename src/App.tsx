@@ -208,6 +208,14 @@ function App() {
     { name: 'Tinaz Pizza', logo: '/Menu/assets/images/tpz.jpeg', url: 'https://menu.omegasoftware.ca/tinazpizza?fbclid=PAQ0xDSwLcVeRleHRuA2FlbQIxMQABp-zV86rW11YNEBOQB1vY8WbvhQ3md3p7jfOjZcJtpPzXoK4vtW4h6Wd0y86U_aem_cnq6j0A8n41YGm67fCDKNg' }
   ];
 
+  // When food section is shown, set activeSection to 'food' for navigation highlight and scroll to top
+  useEffect(() => {
+    if (showFoodSection) {
+      setActiveSection('food');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [showFoodSection]);
+
   if (isLoading) {
     return <Loader onLoadComplete={handleLoadComplete} theme={theme} />;
   }
