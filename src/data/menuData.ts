@@ -1,4 +1,4 @@
-import { Cigarette, Coffee, Droplet, Wine } from 'lucide-react';
+import { Cigarette, Coffee, CupSoda, Popcorn, Wine } from 'lucide-react';
 import { MenuCategory } from '../types';
 import { getImageForItem } from '../utils/imageAssignment';
 
@@ -29,8 +29,8 @@ export const menuData: MenuCategory[] = [
         name: 'Extra Ras',
         nameAr: 'اكسترا راس',
         price: 150000,
-        description: 'Special local beverage',
-        descriptionAr: 'مشروب محلي خاص',
+        description: 'Extra ras change',
+        descriptionAr: 'تغيير راس شيشة اضافي',
         image: getImageForItem('extra-ras', 'Extra Ras', 'shisha'),
         category: 'shisha',
         preparationTime: 3,
@@ -42,7 +42,7 @@ export const menuData: MenuCategory[] = [
     id: 'soft-drinks',
     title: 'Soft Drinks',
     titleAr: 'المشروبات الغازية',
-    icon: Droplet,
+    icon: CupSoda,
     description: 'Refreshing beverages',
     descriptionAr: 'مشروبات منعشة',
     items: [
@@ -170,7 +170,7 @@ export const menuData: MenuCategory[] = [
         name: 'Rakwet Ahwe',
         nameAr: 'ركوة قهوة',
         price: 300000,
-        description: 'Traditional Arabic coffee service',
+        description: 'Traditional Arabic coffee',
         descriptionAr: 'خدمة قهوة عربية تقليدية',
         image: getImageForItem('rakwe-ahwe', 'Rakwe Ahwe', 'hot-beverages'),
         category: 'hot-beverages',
@@ -252,8 +252,8 @@ export const menuData: MenuCategory[] = [
         name: 'Maccaw',
         nameAr: 'ماكاو',
         price: 100000,
-        description: 'Tropical fruit drink',
-        descriptionAr: 'مشروب فواكه استوائية',
+        description: 'Fruit drink',
+        descriptionAr: 'مشروب فواكهة',
         image: getImageForItem('maccaw', 'Maccaw', 'cold-beverages'),
         category: 'cold-beverages',
         preparationTime: 3,
@@ -266,7 +266,7 @@ export const menuData: MenuCategory[] = [
     id: 'snacks',
     title: 'Snacks',
     titleAr: 'الوجبات الخفيفة',
-    icon: Coffee,
+    icon: Popcorn,
     description: 'Light snacks and treats',
     descriptionAr: 'وجبات خفيفة ومعاملات',
     items: [
@@ -285,10 +285,10 @@ export const menuData: MenuCategory[] = [
       {
         id: 'termos',
         name: 'Termos',
-        nameAr: 'ترموس',
+        nameAr: 'ترمس',
         price: 100000,
-        description: 'Thermos hot beverage',
-        descriptionAr: 'مشروب ساخن في ترموس',
+        description: 'Termos snack',
+        descriptionAr: 'ترمس',
         image: getImageForItem('termos', 'Termos', 'snacks'),
         category: 'snacks',
         preparationTime: 5,
@@ -307,5 +307,6 @@ export const menuData: MenuCategory[] = [
         tags: ['fresh', 'healthy', 'juice']
       }
     ]
-  }
+  },
+  
 ];

@@ -23,6 +23,7 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
+  const [showFoodSection, setShowFoodSection] = useState(false);
 
   // Detect mobile device
   useEffect(() => {
@@ -199,6 +200,14 @@ function App() {
     };
   }, []);
 
+  // Food court menu links and logos
+  const foodMenuLinks = [
+    { name: 'Mr Kaak', logo: '/Menu/assets/images/mk.jpeg', url: 'https://pdflink.to/3cebbb37/?fbclid=PAQ0xDSwLbbMBleHRuA2FlbQIxMQABpyBTMjAMM_Dbf22ppaUK1HB0DG2739Litb1Iuk4-0-a7fGvAgSvAkkPl8Dly_aem_nSl7cx1Ub6BhklLPBE7SjQ' },
+    { name: 'Juice It Up', logo: '/Menu/assets/images/ju.jpeg', url: '/Menu/assets/images/jumenu.jpeg' },
+    { name: '3al Osoul', logo: '/Menu/assets/images/ao.jpeg', url: 'https://linktr.ee/3alosoul?fbclid=PAQ0xDSwLbbVpleHRuA2FlbQIxMQABpygO9yE7rHhyIuO3hwXrz-HkR5HLiZORODr54uH3wu9NW_bMOW586WTSZrsi_aem_fZqv7dSnY-oxKPq-5QvM2A' },
+    { name: 'Tinaz Pizza', logo: '/Menu/assets/images/tpz.jpeg', url: 'https://menu.omegasoftware.ca/tinazpizza?fbclid=PAQ0xDSwLcVeRleHRuA2FlbQIxMQABp-zV86rW11YNEBOQB1vY8WbvhQ3md3p7jfOjZcJtpPzXoK4vtW4h6Wd0y86U_aem_cnq6j0A8n41YGm67fCDKNg' }
+  ];
+
   if (isLoading) {
     return <Loader onLoadComplete={handleLoadComplete} theme={theme} />;
   }
@@ -226,8 +235,7 @@ function App() {
           <div className="floating-steam" style={{left: '60%', animationDelay: '2s'}}></div>
           <div className="floating-steam" style={{left: '30%', animationDelay: '4s'}}></div>
         </div>
-
-      {/* Conditional Header */}
+{/* Conditional Header */}
       {isMobile ? (
         <MobileHeader 
           language={language}
@@ -247,11 +255,9 @@ function App() {
           cartItemsCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
         />
       )}
-
-      {/* Hero Section */}
+        {/* Hero Section */}
       <section className={`text-center ${isMobile ? 'px-4 pt-24 pb-8' : 'pt-32 mb-16 animate-fadeIn'} relative z-10`}>
         <div className={isMobile ? 'max-w-sm mx-auto' : 'max-w-4xl mx-auto'}>
-          
           {/* Town Café Logo in Hero */}
           {!isMobile && (
             <div className="mb-8">
@@ -264,30 +270,12 @@ function App() {
               </div>
             </div>
           )}
-          
           <h1 className={`${isMobile ? 'text-4xl' : 'text-5xl md:text-7xl'} font-bold mb-6 arabic-text`}>
             <span className="gradient-text">
               {language === 'ar' ? 'تاون كافيه' : 'Welcome to Town Café'}
             </span>
           </h1> 
           
-           {/* {!isMobile && (
-            <p className="text-xl md:text-2xl mb-6 text-amber-700 dark:text-amber-300 font-medium">
-              {language === 'ar' 
-                ? 'كافيه عصري لعشاق الشيشة والمشروبات الفاخرة' 
-                : 'Modern café for shisha and premium drinks lovers'
-              }
-            </p>
-          )}  */}
-          
-          {/* <p className={`${isMobile ? 'text-lg mb-4' : 'text-lg mb-8'} text-amber-600 dark:text-amber-400`}>
-            {language === 'ar' 
-              ? isMobile ? 'كافيه عصري لعشاق الشيشة' : 'تجربة فريدة مع أفضل أنواع الشيشة والمشروبات في أجواء عصرية ومريحة'
-              : isMobile ? 'Modern café for shisha lovers' : 'Where tradition meets modern comfort in the heart of Riyadh'
-            }
-          </p> */}
-          
-          {/* Decorative divider */}
            <div className="flex items-center justify-center space-x-3 mb-4">
             <div className={`${isMobile ? 'w-12' : 'w-16'} h-0.5 bg-gradient-to-r from-transparent to-amber-600`}></div>
             <span className="text-amber-700 text-lg">☕</span>
@@ -295,31 +283,52 @@ function App() {
             <span className="text-amber-700 text-lg">☕</span>
             <div className={`${isMobile ? 'w-12' : 'w-16'} h-0.5 bg-gradient-to-r from-amber-600 to-transparent`}></div>
           </div> 
-          
-          {/* <p className="text-sm text-orange-600 dark:text-orange-400 italic mb-6">
-            {language === 'ar' ? 'حيث يلتقي التراث بالراحة العصرية' : 'Authentic flavors, modern atmosphere'}
-          </p> */}
         </div>
       </section>
+
+      {/* Food Court Section (shows only when food tab is selected) */}
+      {isMobile && showFoodSection && (
+        <section className="px-4 pt-0 pb-8 relative z-20">
+          <div className="max-w-md mx-auto bg-gradient-to-br from-orange-50/90 via-white/90 to-amber-100/90 dark:from-slate-900/90 dark:via-slate-800/90 dark:to-slate-900/90 rounded-3xl shadow-2xl border-2 border-orange-300/60 p-8 mb-8 flex flex-col items-center">
+            <h2 className="text-2xl font-extrabold mb-8 text-orange-700 text-center tracking-wide drop-shadow-lg">Food Court Menus</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+              {foodMenuLinks.map(link => (
+                <li key={link.name} className="flex flex-col items-center bg-white/80 dark:bg-slate-800/80 rounded-2xl shadow-lg border border-orange-100/40 p-4 hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                  <div className="w-28 h-28 mb-4 rounded-full overflow-hidden border-4 border-orange-200 shadow-xl group-hover:border-orange-400 transition-all duration-300 bg-gradient-to-tr from-orange-100 to-amber-200 dark:from-slate-700 dark:to-slate-900">
+                    <img src={link.logo} alt={link.name} className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-amber-800 dark:text-amber-300 text-lg font-bold text-center block mb-1 drop-shadow">
+                    {link.name}
+                  </span>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-xs text-orange-500 dark:text-orange-200 opacity-80 underline underline-offset-4 hover:text-orange-600 transition-colors duration-200 mt-1">
+                    View Menu
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Main Content */}
       <main className={`${isMobile ? '' : 'container mx-auto px-4 py-8'} relative z-10`}>
         {/* Menu Sections */}
-        <div className={isMobile ? 'space-y-8' : 'space-y-16'}>
-          {filteredMenuData.map((category, index) => (
-            <MenuSection
-              key={category.id}
-              category={category}
-              language={language}
-              theme={theme}
-              onAddToCart={addToCart}
-              onOpenModal={openItemModal}
-              animationDelay={index * 0.1}
-              isMobile={isMobile}
-            />
-          ))}
-        </div>
-
+        {!showFoodSection && (
+          <div className={isMobile ? 'space-y-8' : 'space-y-16'}>
+            {filteredMenuData.map((category, index) => (
+              <MenuSection
+                key={category.id}
+                category={category}
+                language={language}
+                theme={theme}
+                onAddToCart={addToCart}
+                onOpenModal={openItemModal}
+                animationDelay={index * 0.1}
+                isMobile={isMobile}
+              />
+            ))}
+          </div>
+        )}
         {/* Contact Section */}
         <section className={`${isMobile ? 'mt-12 px-4' : 'mt-20'} animate-fadeIn`}>
           <div className={`glass dark:glass-dark rounded-2xl ${isMobile ? 'p-6' : 'p-8'} ${isMobile ? '' : 'max-w-2xl mx-auto'} border border-amber-200/50 dark:border-amber-500/30 shadow-xl`}>
@@ -391,6 +400,7 @@ function App() {
             language={language}
             theme={theme}
             onSectionChange={setActiveSection}
+            onShowFoodSection={setShowFoodSection}
           />
 
           {/* Mobile Cart */}

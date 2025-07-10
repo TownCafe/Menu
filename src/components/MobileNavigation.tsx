@@ -1,18 +1,20 @@
 import React from 'react';
-import { Cigarette, Coffee, CupSoda, Droplet, GlassWater, Popcorn, Snowflake, Wine } from 'lucide-react';
+import { Cigarette, Coffee, CupSoda, Utensils, GlassWater, Pizza, Popcorn, Wine } from 'lucide-react';
 
 interface MobileNavigationProps {
   activeSection: string;
   language: 'ar' | 'en';
   theme: 'light' | 'dark';
   onSectionChange: (section: string) => void;
+  onShowFoodSection?: (show: boolean) => void; // NEW PROP
 }
 
 const MobileNavigation: React.FC<MobileNavigationProps> = ({
   activeSection,
   language,
   theme,
-  onSectionChange
+  onSectionChange,
+  onShowFoodSection // NEW PROP
 }) => {
   const sections = [
     { id: 'shisha', name: 'Shisha', nameAr: 'الشيشة', icon: Cigarette },
@@ -20,10 +22,16 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
     { id: 'hot-beverages', name: 'Hot', nameAr: 'الساخنة', icon: Coffee },
     { id: 'cold-beverages', name: 'Cold', nameAr: 'الباردة', icon: GlassWater },
     // { id: 'premium-drinks', name: 'Premium', nameAr: 'المميزة', icon: Wine },
-    { id: 'snacks', name: 'Snacks', nameAr: 'المقبلات', icon: Popcorn }
+    { id: 'snacks', name: 'Snacks', nameAr: 'المقبلات', icon: Popcorn },
+    { id: 'food', name: 'food', nameAr: 'food', icon: Utensils }
   ];
 
   const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'food') {
+      if (onShowFoodSection) onShowFoodSection(true);
+      return;
+    }
+    if (onShowFoodSection) onShowFoodSection(false);
     const element = document.getElementById(sectionId);
     if (element) {
       const headerHeight = 64; // Mobile header height
@@ -47,7 +55,6 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
         {sections.map((section) => {
           const Icon = section.icon;
           const isActive = activeSection === section.id;
-          
           return (
             <button
               key={section.id}
