@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center space-x-4">
             <ThemeToggle theme={theme} language={language} onToggle={onToggleTheme} />
             <LanguageToggle language={language} onToggle={onToggleLanguage} />
-            
+  
             {/* Cart Button */}
             <div className="cart-button">
               <button className="glass dark:glass-dark rounded-full px-4 py-3 transition-all duration-300 shadow-lg hover:bg-amber-50/50 dark:hover:bg-amber-900/20 flex items-center justify-center hover:scale-105">
@@ -98,7 +98,6 @@ const Header: React.FC<HeaderProps> = ({
                 </div>
               </button>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
