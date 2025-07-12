@@ -23,7 +23,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
     { id: 'cold-beverages', name: 'Cold', nameAr: 'الباردة', icon: Wine },
     // { id: 'premium-drinks', name: 'Premium', nameAr: 'المميزة', icon: Wine },
     { id: 'snacks', name: 'Snacks', nameAr: 'المقبلات', icon: Popcorn },
-    { id: 'food', name: 'food', nameAr: 'food', icon: Utensils }
+    { id: 'food', name: 'Food', nameAr: 'طعام', icon: Utensils }
   ];
 
   const scrollToSection = (sectionId: string) => {

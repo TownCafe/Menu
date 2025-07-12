@@ -132,18 +132,6 @@ export function getImagesForCategory(category: string): string[] {
     .map(key => imageDatabase[key]);
 }
 
-/**
- * Get menu links for the food section
- * @returns Array of menu link objects
- */
-export function getFoodMenuLinks(): { name: string; url: string }[] {
-  return [
-    { name: 'Main Food Menu', url: 'https://example.com/food-menu.pdf' },
-    { name: 'Desserts Menu', url: 'https://example.com/desserts-menu.pdf' },
-    { name: 'Specials', url: 'https://example.com/specials-menu.pdf' }
-    // Add more links as needed
-  ];
-}
 
 // Export the mappings for external use if needed
 export { imageDatabase, categoryFallbacks };
