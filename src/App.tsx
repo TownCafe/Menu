@@ -203,9 +203,10 @@ function App() {
   // Food court menu links and logos
   const foodMenuLinks = [
     { name: 'Mr Kaak', logo: '/Menu/assets/images/mk.jpeg', url: 'https://pdflink.to/3cebbb37/?fbclid=PAQ0xDSwLbbMBleHRuA2FlbQIxMQABpyBTMjAMM_Dbf22ppaUK1HB0DG2739Litb1Iuk4-0-a7fGvAgSvAkkPl8Dly_aem_nSl7cx1Ub6BhklLPBE7SjQ' },
-    { name: 'Juice It Up', logo: '/Menu/assets/images/ju.jpeg', url: '/Menu/assets/images/jumenu.jpeg' },
-    { name: '3al Osoul', logo: '/Menu/assets/images/ao.jpeg', url: 'https://linktr.ee/3alosoul?fbclid=PAQ0xDSwLbbVpleHRuA2FlbQIxMQABpygO9yE7rHhyIuO3hwXrz-HkR5HLiZORODr54uH3wu9NW_bMOW586WTSZrsi_aem_fZqv7dSnY-oxKPq-5QvM2A' },
-    { name: 'Tinaz Pizza', logo: '/Menu/assets/images/tpz.jpeg', url: 'https://menu.omegasoftware.ca/tinazpizza?fbclid=PAQ0xDSwLcVeRleHRuA2FlbQIxMQABp-zV86rW11YNEBOQB1vY8WbvhQ3md3p7jfOjZcJtpPzXoK4vtW4h6Wd0y86U_aem_cnq6j0A8n41YGm67fCDKNg' }
+    // { name: 'Pasta Cup', logo: '/Menu/assets/images/pastac.jpeg', url: 'https://pdflink.to/3cebbb37/?fbclid=PAQ0xDSwLbbMBleHRuA2FlbQIxMQABpyBTMjAMM_Dbf22ppaUK1HB0DG2739Litb1Iuk4-0-a7fGvAgSvAkkPl8Dly_aem_nSl7cx1Ub6BhklLPBE7SjQ' },
+    // { name: 'Juice It Up', logo: '/Menu/assets/images/ju.jpeg', url: '/Menu/assets/images/jumenu.jpeg' },
+    // { name: '3al Osoul', logo: '/Menu/assets/images/ao.jpeg', url: 'https://linktr.ee/3alosoul?fbclid=PAQ0xDSwLbbVpleHRuA2FlbQIxMQABpygO9yE7rHhyIuO3hwXrz-HkR5HLiZORODr54uH3wu9NW_bMOW586WTSZrsi_aem_fZqv7dSnY-oxKPq-5QvM2A' },
+    // { name: 'Tinaz Pizza', logo: '/Menu/assets/images/tpz.jpeg', url: 'https://menu.omegasoftware.ca/tinazpizza?fbclid=PAQ0xDSwLcVeRleHRuA2FlbQIxMQABp-zV86rW11YNEBOQB1vY8WbvhQ3md3p7jfOjZcJtpPzXoK4vtW4h6Wd0y86U_aem_cnq6j0A8n41YGm67fCDKNg' }
   ];
 
   // When food section is shown, set activeSection to 'food' for navigation highlight and scroll to top
