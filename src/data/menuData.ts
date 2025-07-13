@@ -106,6 +106,18 @@ export const menuData: MenuCategory[] = [
         preparationTime: 2,
         tags: ['diet', 'sugar-free', 'lemon']
       },
+        {
+        id: 'perrier',
+        name: 'Perrier',
+        nameAr: 'بيرييه',
+        price: 150000,
+        description: 'Sparkling mineral water',
+        descriptionAr: 'مياه معدنية فوارة',
+        image: getImageForItem('perrier', 'Perrier', 'soft-drinks'),
+        category: 'soft-drinks',
+        preparationTime: 2,
+        tags: ['pure', 'refreshing']
+      },
       {
         id: 'water',
         name: 'Water',
@@ -194,8 +206,8 @@ export const menuData: MenuCategory[] = [
         nameAr: 'فريسكو',
         price: 250000,
         description: 'Refreshing frisco juice',
-        descriptionAr: 'شايفريسكو مثلج منعش',
-        image: getImageForItem('Frisco', 'Frisco', 'cold-beverages'),
+        descriptionAr: 'فريسكو مثلج منعش',
+        image: getImageForItem('frisco', 'Frisco', 'cold-beverages'),
         category: 'cold-beverages',
         preparationTime: 2,
         tags: ['iced', 'refreshing']
