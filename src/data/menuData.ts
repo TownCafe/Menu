@@ -20,7 +20,7 @@ export const menuData: MenuCategory[] = [
         descriptionAr: 'شيشة ممتازة مع النكهة التي تختارها',
         image: getImageForItem('shisha', 'Shisha', 'shisha'),
         category: 'shisha',
-        preparationTime: 15,
+        preparationTime: 10,
         isPopular: true,
         tags: ['popular', 'premium']
       },
@@ -106,6 +106,18 @@ export const menuData: MenuCategory[] = [
         preparationTime: 2,
         tags: ['diet', 'sugar-free', 'lemon']
       },
+        {
+        id: 'perrier',
+        name: 'Perrier',
+        nameAr: 'بيرييه',
+        price: 150000,
+        description: 'Sparkling mineral water',
+        descriptionAr: 'مياه معدنية فوارة',
+        image: getImageForItem('perrier', 'Perrier', 'soft-drinks'),
+        category: 'soft-drinks',
+        preparationTime: 2,
+        tags: ['pure', 'refreshing']
+      },
       {
         id: 'water',
         name: 'Water',
@@ -150,7 +162,7 @@ export const menuData: MenuCategory[] = [
         descriptionAr: 'قهوة سريعة التحضير',
         image: getImageForItem('nescafe', 'Nescafe', 'hot-beverages'),
         category: 'hot-beverages',
-        preparationTime: 3,
+        preparationTime: 5,
         tags: ['instant', 'quick']
       },
       {
@@ -189,6 +201,18 @@ export const menuData: MenuCategory[] = [
     descriptionAr: 'مشروبات مثلجة وباردة',
     items: [
       {
+        id: 'frisco',
+        name: 'Frisco',
+        nameAr: 'فريسكو',
+        price: 250000,
+        description: 'Refreshing frisco juice',
+        descriptionAr: 'فريسكو مثلج منعش',
+        image: getImageForItem('frisco', 'Frisco', 'cold-beverages'),
+        category: 'cold-beverages',
+        preparationTime: 2,
+        tags: ['iced', 'refreshing']
+      },
+      {
         id: 'ice-tea',
         name: 'Ice Tea',
         nameAr: 'شاي مثلج',
@@ -197,7 +221,7 @@ export const menuData: MenuCategory[] = [
         descriptionAr: 'شاي مثلج منعش',
         image: getImageForItem('ice-tea', 'Ice Tea', 'cold-beverages'),
         category: 'cold-beverages',
-        preparationTime: 5,
+        preparationTime: 2,
         tags: ['iced', 'refreshing']
       },
       {
@@ -209,7 +233,7 @@ export const menuData: MenuCategory[] = [
         descriptionAr: 'قهوة مثلجة باردة',
         image: getImageForItem('ice-coffee', 'Ice Coffee', 'cold-beverages'),
         category: 'cold-beverages',
-        preparationTime: 5,
+        preparationTime: 2,
         tags: ['iced', 'coffee']
       },{
         id: 'xxl',
@@ -227,7 +251,7 @@ export const menuData: MenuCategory[] = [
         id: 'almaza',
         name: 'Almaza',
         nameAr: 'الماظة',
-        price: 200000,
+        price: 250000,
         description: 'Premium Lebanese beer',
         descriptionAr: 'بيرة لبنانية مميزة',
         image: getImageForItem('almaza', 'Almaza', 'cold-beverages'),
@@ -239,7 +263,7 @@ export const menuData: MenuCategory[] = [
         id: 'almaza-light',
         name: 'Almaza Light',
         nameAr: 'الماظة لايت',
-        price: 200000,
+        price: 250000,
         description: 'Light Lebanese beer',
         descriptionAr: 'بيرة لبنانية خفيفة',
         image: getImageForItem('almaza-light', 'Almaza Light', 'cold-beverages'),
@@ -256,7 +280,7 @@ export const menuData: MenuCategory[] = [
         descriptionAr: 'مشروب فواكهة',
         image: getImageForItem('maccaw', 'Maccaw', 'cold-beverages'),
         category: 'cold-beverages',
-        preparationTime: 3,
+        preparationTime: 2,
         tags: ['tropical', 'fruit']
       }
       
@@ -279,7 +303,7 @@ export const menuData: MenuCategory[] = [
         descriptionAr: 'تشكيلة مكسرات مختلطة',
         image: getImageForItem('nuts', 'Nuts', 'snacks'),
         category: 'snacks',
-        preparationTime: 1,
+        preparationTime: 3,
         tags: ['healthy', 'crunchy']
       },
       {
@@ -291,7 +315,7 @@ export const menuData: MenuCategory[] = [
         descriptionAr: 'ترمس',
         image: getImageForItem('termos', 'Termos', 'snacks'),
         category: 'snacks',
-        preparationTime: 5,
+        preparationTime: 3,
         tags: ['hot', 'thermos']
       },
       {

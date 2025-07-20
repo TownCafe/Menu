@@ -33,7 +33,8 @@ const imageDatabase: ImageMapping = {
   'rakwe-ahwe': '/Menu/assets/images/coffeerakwa.png',
   'termos': '/Menu/assets/images/termos.png',
   'jazar': '/Menu/assets/images/carrot.png',
-  
+  'frisco': '/Menu/assets/images/frisco.jpeg',
+  'perrier': '/Menu/assets/images/perrier.jpeg',
   // Shisha
   'shisha': '/Menu/assets/images/ss.png',
   
