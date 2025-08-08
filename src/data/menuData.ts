@@ -28,7 +28,7 @@ export const menuData: MenuCategory[] = [
         id: 'extra-ras',
         name: 'Extra Ras',
         nameAr: 'اكسترا راس',
-        price: 150000,
+        price: 300000,
         description: 'Extra ras change',
         descriptionAr: 'تغيير راس شيشة اضافي',
         image: getImageForItem('extra-ras', 'Extra Ras', 'shisha'),
