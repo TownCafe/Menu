@@ -15,7 +15,7 @@ export const menuData: MenuCategory[] = [
         id: 'shisha',
         name: 'Shisha',
         nameAr: 'شيشة',
-        price: 500000,
+        price: 600000,
         description: 'Premium shisha with your choice of flavor',
         descriptionAr: 'شيشة ممتازة مع النكهة التي تختارها',
         image: getImageForItem('shisha', 'Shisha', 'shisha'),
